@@ -158,14 +158,14 @@ sup {
 }
 
 a {
-  color: tomato;
+  color: #4c30ff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #fa2600;
+  color: #1f00e3;
   text-decoration: underline;
 }
 
@@ -5784,6 +5784,10 @@ footer {
           align-items: center;
 }
 
+footer .content {
+  margin-top: 30px;
+}
+
 footer .content h2 {
   font-size: 40px;
   width: 80%;
@@ -5834,6 +5838,41 @@ footer .contact .legal p {
   font-family: "averta-light", sans-serif;
   padding: 0 5px;
   margin: auto;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #1a1a1a;
+  overflow: hidden !important;
+  z-index: 10000;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center !important;
+  color: #fff;
+}
+
+.wrapper img {
+  width: 300px;
+}
+
+.wrapper .img {
+  width: 100%;
+}
+
+.wrapper span {
+  color: #4c30ff;
+  text-transform: uppercase;
 }
 
 /*==========  Desktop First  ==========*/
