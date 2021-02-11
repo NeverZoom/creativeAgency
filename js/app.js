@@ -1,3 +1,9 @@
+// Preloader
+$(window).on('load', function () {
+	$preloader = $('.wrapper'),
+	$preloader.delay(650).slideUp();
+});
+
 class Button {
   constructor(node) {
     this.button = node;
