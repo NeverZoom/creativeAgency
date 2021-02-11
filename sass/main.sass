@@ -88,7 +88,7 @@ body
 		span
 			display: block
 			line-height: 20px
-			margin-left: -55vh
+			margin-left: -26vw
 			font-size: 25px
 
 
@@ -130,12 +130,53 @@ body
 	height: 80vh
 	background: url(/img/slide-1.jpg) center
 	background-size: cover
+	p
+		font-size: 30px 
+		color: #fff
 
 footer
-	height: 90vh
+	min-height: 80vh
 	background: #1a1a1a
 	color: #373737
+	display: flex
+	justify-content: center
+	align-items: center
+	.content
+		h2
+			font-size: 40px
+			width: 80%
+	.contact
+		span
+			margin: 40px 0 !important
+			display: block
+			color: #fff
+			p
+				font-size: 25px
+			a
+				opacity: 0.6
+				display: inline-block
+				padding: 10px 0
+				font-size: 16px
+				color: #fff
+				&:hover
+					text-decoration: none
+				i
+					font-size: 25px
+		.social-icons
+			display: block
+			a
+				padding: 0 20px
+				&:nth-child(1)
+					padding-left: 0px !important
+		.legal
+			p
+				opacity: 0.6
+				display: inline-block
+				font-size: 14px
+				font-family: $f-light
+				padding: 0 5px
+				margin: auto
 
-	
+
 // Always at the end
 @import "media"
