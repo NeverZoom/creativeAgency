@@ -5697,7 +5697,7 @@ body {
 .banner h1 span {
   display: block;
   line-height: 20px;
-  margin-left: -55vh;
+  margin-left: -26vw;
   font-size: 25px;
 }
 
@@ -5764,10 +5764,76 @@ body {
   background-size: cover;
 }
 
+.case-slider p {
+  font-size: 30px;
+  color: #fff;
+}
+
 footer {
-  height: 90vh;
+  min-height: 80vh;
   background: #1a1a1a;
   color: #373737;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .content h2 {
+  font-size: 40px;
+  width: 80%;
+}
+
+footer .contact span {
+  margin: 40px 0 !important;
+  display: block;
+  color: #fff;
+}
+
+footer .contact span p {
+  font-size: 25px;
+}
+
+footer .contact span a {
+  opacity: 0.6;
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+footer .contact span a:hover {
+  text-decoration: none;
+}
+
+footer .contact span a i {
+  font-size: 25px;
+}
+
+footer .contact .social-icons {
+  display: block;
+}
+
+footer .contact .social-icons a {
+  padding: 0 20px;
+}
+
+footer .contact .social-icons a:nth-child(1) {
+  padding-left: 0px !important;
+}
+
+footer .contact .legal p {
+  opacity: 0.6;
+  display: inline-block;
+  font-size: 14px;
+  font-family: "averta-light", sans-serif;
+  padding: 0 5px;
+  margin: auto;
 }
 
 /*==========  Desktop First  ==========*/
