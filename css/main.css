@@ -5578,12 +5578,10 @@ body {
   width: 100vw;
   position: fixed;
   overflow-y: hidden !important;
+  display: none;
   right: 0;
   top: 0;
   z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -5965,4 +5963,32 @@ footer .contact .legal p {
 
 /*==========  Desktop First  ==========*/
 /*==========  Mobile First  ==========*/
+.banner h1 {
+  font-size: 65px;
+}
+
+.top-line {
+  padding: 0 10px;
+}
+
+@media (min-width: 576px) {
+  .banner h1 {
+    font-size: 100px;
+  }
+  .top-line {
+    padding: 0 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner h1 {
+    font-size: 125px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner h1 {
+    font-size: 140px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
