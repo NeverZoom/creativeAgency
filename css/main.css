@@ -5789,7 +5789,7 @@ body {
 
 .services {
   height: 120vh;
-  background: url(/img/sevices.jpg) center;
+  background: url(/creativeAgency/img/sevices.jpg) center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5846,7 +5846,7 @@ body {
 
 .case-slider {
   height: 80vh;
-  background: url(/img/slide-1.jpg) center;
+  background: url(/creativeAgency/img/slide-1.jpg) center;
   background-size: cover;
 }
 
@@ -5963,6 +5963,7 @@ footer .contact .legal p {
 
 /*==========  Desktop First  ==========*/
 /*==========  Mobile First  ==========*/
+
 .banner h1 {
   font-size: 65px;
 }
