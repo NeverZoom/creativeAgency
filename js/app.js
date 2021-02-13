@@ -129,10 +129,36 @@ buttons.forEach((button) => {
 
 window.addEventListener("mousemove", (e) => handleBubble(e));
 
-const burger = document.querySelector('.menu .button');
 
-burger.addEventListener('click', ()=>{
+const navSlide = () => {
 
-	alert('открытие менюшки');
+	const burger = document.querySelector('.menu .button');
+	const overlay = document.querySelector('.menu-overlay');
+	const line = document.querySelectorAll('.menu .button .burger .line');
+	const lay = document.querySelector('.menu-overlay .lay');
 
-});
+	burger.addEventListener('click', ()=> {
+
+		overlay.classList.toggle('overlay-active');
+		overlay.style.animation = `navLinkFade 0.5s ease forwards 0.3s`;
+
+		// overlay.style.animation = `navLinkFadeOut 0.5s ease forwards 0.3s`;
+
+		line.forEach((i) => {
+			i.classList.toggle('active');
+		});
+
+	});
+
+	lay.addEventListener('click', ()=> {
+
+		overlay.classList.toggle('overlay-active');
+
+		line.forEach((i) => {
+			i.classList.toggle('active');
+		});
+	});
+
+}
+
+navSlide();
