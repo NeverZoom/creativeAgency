@@ -79,7 +79,6 @@ class Button {
   handleCatch() {
     // translates the button in the direction where cursor is.
     this.button.style.transform = `translate(${this.xWalk}px, ${this.yWalk}px)`;
-		this.button.classList.add('burger-hover');
   }
 
   handleReset() {
@@ -87,7 +86,6 @@ class Button {
     this.button.style.transform = `translate(${0}px, ${0}px)`;
     if (this.mouseHasEntered) this.distance = 50;
     this.mouseHasEntered = false; // when button is return to it's position (mouseHasEntered = true) lets to increase the initial borderline of button for the next time
-		this.button.classList.remove('burger-hover');
 		
 	}
 }
@@ -136,10 +134,12 @@ const navSlide = () => {
 	const overlay = document.querySelector('.menu-overlay');
 	const line = document.querySelectorAll('.menu .button .burger .line');
 	const lay = document.querySelector('.menu-overlay .lay');
+	const bubble = document.querySelector('.bubble');
 
 	burger.addEventListener('click', ()=> {
 
 		overlay.classList.toggle('overlay-active');
+		bubble.classList.toggle('mbm');
 		overlay.style.animation = `navLinkFade 0.5s ease forwards 0.3s`;
 
 		// overlay.style.animation = `navLinkFadeOut 0.5s ease forwards 0.3s`;
@@ -153,6 +153,7 @@ const navSlide = () => {
 	lay.addEventListener('click', ()=> {
 
 		overlay.classList.toggle('overlay-active');
+		bubble.classList.toggle('mbm');
 
 		line.forEach((i) => {
 			i.classList.toggle('active');
