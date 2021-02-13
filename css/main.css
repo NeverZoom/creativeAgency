@@ -6035,7 +6035,7 @@ body {
 
 .services {
   height: 120vh;
-  background: url(../creativeAgency/img/sevices.jpg) center;
+  background: url(/creativeAgency/img/sevices.jpg) center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6092,7 +6092,7 @@ body {
 
 .case-slider {
   height: 80vh;
-  background: url(../creativeAgency/img/slide-1.jpg) center;
+  background: url(/creativeAgency/img/slide-1.jpg) center;
   background-size: cover;
 }
 
