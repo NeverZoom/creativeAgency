@@ -24,20 +24,19 @@ body
 	width: 100vw
 	position: fixed
 	overflow-y: hidden !important
-	display: none 
+	// display: none 
 	right: 0
 	top: 0
 	z-index: 100
-	// display: flex
+	display: flex
 	justify-content: center
 	.lay
-		background: rgba(121, 121, 121, 0.5)
+		background: rgba(82, 82, 82, 0.5)
 		width: 55vw
 		display: inline-block
 		height: 100%
 	nav
 		background: #fff
-		display: inline-block
 		width: 45vw
 		height: 100%
 		display: flex
@@ -49,27 +48,140 @@ body
 		.social
 			padding: 20% 0 0 0
 			width: 30%
+			height: 90%
 			display: flex
 			justify-content: center
 			a
-				display: block
+				display: inline-block
+				position: relative
 				padding: 12px 0
 				color: #000
 				&:hover
 					text-decoration: none
+					span
+						transform: translateY(-105%)
+					span:before
+						transform: skewY(7deg)
+					span:after
+						transform: skewY(0deg)
+				em
+					display: block
+					overflow: hidden
+					position: relative
+					font-style: normal
+					span
+						display: inline-block
+						color: transparent
+						transition: transform 1.2s cubic-bezier(.19,1,.22,1)
+						&::before
+							content: attr(data-text)
+							display: block
+							position: absolute
+							color: #000
+							transform: skewY(0)
+							top: 0
+							transition: transform 1.2s cubic-bezier(.19,1,.22,1)
+						&::after
+							content: attr(data-text)
+							display: block
+							position: absolute
+							color: #000
+							transform: skewY(7deg)
+							top: 105%
+							transition: transform 1.2s cubic-bezier(.19,1,.22,1)
 		.menu
 			padding: 20% 0 0 0
 			width: 70%
+			height: 90%
 			display: flex
 			justify-content: center
 			li
-				font-size: 60px
-				line-height: 84px
 				a
-					display: block
+					display: inline-block
+					position: relative
 					color: #000
+					font-size: 60px
+					line-height: 74px
 					&:hover
 						text-decoration: none
+						span
+							transform: translateY(-105%)
+						span:before
+							transform: skewY(7deg)
+						span:after
+							transform: skewY(0deg)
+					em
+						display: block
+						overflow: hidden
+						position: relative
+						font-style: normal
+						span
+							display: inline-block
+							color: transparent
+							transition: transform 1.2s cubic-bezier(.19,1,.22,1)
+							&::before
+								content: attr(data-text)
+								display: block
+								position: absolute
+								color: #000
+								transform: skewY(0)
+								top: 0
+								transition: transform 1.2s cubic-bezier(.19,1,.22,1)
+							&::after
+								content: attr(data-text)
+								display: block
+								position: absolute
+								color: #000
+								transform: skewY(7deg)
+								top: 105%
+								transition: transform 1.2s cubic-bezier(.19,1,.22,1)
+		.get-in-touch
+			bottom: 0
+			width: 15%
+			display: flex
+			justify-content: center
+			height: 15%
+			position: absolute
+			p
+				font-size: 16px
+				opacity: 0.7
+				margin: 0
+				padding: 5px 0
+			a
+				color: #000
+				display: inline-block
+				position: relative
+				padding: 0 0 5px 0
+				line-height: 20px
+				letter-spacing: .00464286em
+				transition: transform .8s cubic-bezier(.19,1,.22,1)
+				&:hover
+					text-decoration: none
+					&::after
+						transform: scaleX(1)
+				&::before
+					content: ""
+					display: block
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					height: 1px
+					background: rgba(0,0,0,.3)
+				&::after
+					content: ""
+					display: block
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					height: 1px
+					transform: scaleX(0)
+					transition: transform .8s cubic-bezier(.19,1,.22,1)
+					background: #000
+					
+
+
 
 .top-line
 	z-index: 20

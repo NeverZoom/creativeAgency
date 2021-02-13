@@ -5578,17 +5578,19 @@ body {
   width: 100vw;
   position: fixed;
   overflow-y: hidden !important;
-  display: none;
   right: 0;
   top: 0;
   z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .menu-overlay .lay {
-  background: rgba(121, 121, 121, 0.5);
+  background: rgba(82, 82, 82, 0.5);
   width: 55vw;
   display: inline-block;
   height: 100%;
@@ -5596,7 +5598,6 @@ body {
 
 .menu-overlay nav {
   background: #fff;
-  display: inline-block;
   width: 45vw;
   height: 100%;
   display: -webkit-box;
@@ -5616,6 +5617,7 @@ body {
 .menu-overlay nav .social {
   padding: 20% 0 0 0;
   width: 30%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5625,7 +5627,8 @@ body {
 }
 
 .menu-overlay nav .social a {
-  display: block;
+  display: inline-block;
+  position: relative;
   padding: 12px 0;
   color: #000;
 }
@@ -5634,9 +5637,69 @@ body {
   text-decoration: none;
 }
 
+.menu-overlay nav .social a:hover span {
+  -webkit-transform: translateY(-105%);
+          transform: translateY(-105%);
+}
+
+.menu-overlay nav .social a:hover span:before {
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+
+.menu-overlay nav .social a:hover span:after {
+  -webkit-transform: skewY(0deg);
+          transform: skewY(0deg);
+}
+
+.menu-overlay nav .social a em {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  font-style: normal;
+}
+
+.menu-overlay nav .social a em span {
+  display: inline-block;
+  color: transparent;
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menu-overlay nav .social a em span::before {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  color: #000;
+  -webkit-transform: skewY(0);
+          transform: skewY(0);
+  top: 0;
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menu-overlay nav .social a em span::after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  color: #000;
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+  top: 105%;
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
 .menu-overlay nav .menu {
   padding: 20% 0 0 0;
   width: 70%;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5645,18 +5708,145 @@ body {
           justify-content: center;
 }
 
-.menu-overlay nav .menu li {
-  font-size: 60px;
-  line-height: 84px;
-}
-
 .menu-overlay nav .menu li a {
-  display: block;
+  display: inline-block;
+  position: relative;
   color: #000;
+  font-size: 60px;
+  line-height: 74px;
 }
 
 .menu-overlay nav .menu li a:hover {
   text-decoration: none;
+}
+
+.menu-overlay nav .menu li a:hover span {
+  -webkit-transform: translateY(-105%);
+          transform: translateY(-105%);
+}
+
+.menu-overlay nav .menu li a:hover span:before {
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+
+.menu-overlay nav .menu li a:hover span:after {
+  -webkit-transform: skewY(0deg);
+          transform: skewY(0deg);
+}
+
+.menu-overlay nav .menu li a em {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  font-style: normal;
+}
+
+.menu-overlay nav .menu li a em span {
+  display: inline-block;
+  color: transparent;
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menu-overlay nav .menu li a em span::before {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  color: #000;
+  -webkit-transform: skewY(0);
+          transform: skewY(0);
+  top: 0;
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menu-overlay nav .menu li a em span::after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  color: #000;
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+  top: 105%;
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menu-overlay nav .get-in-touch {
+  bottom: 0;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 15%;
+  position: absolute;
+}
+
+.menu-overlay nav .get-in-touch p {
+  font-size: 16px;
+  opacity: 0.7;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.menu-overlay nav .get-in-touch a {
+  color: #000;
+  display: inline-block;
+  position: relative;
+  padding: 0 0 5px 0;
+  line-height: 20px;
+  letter-spacing: .00464286em;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menu-overlay nav .get-in-touch a:hover {
+  text-decoration: none;
+}
+
+.menu-overlay nav .get-in-touch a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.menu-overlay nav .get-in-touch a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-overlay nav .get-in-touch a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  background: #000;
 }
 
 .top-line {
