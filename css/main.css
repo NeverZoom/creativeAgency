@@ -5519,7 +5519,7 @@ html {
 }
 
 .button {
-  z-index: 10;
+  z-index: 9999;
   height: 100%;
   width: 80px;
 }
@@ -5573,17 +5573,23 @@ body {
   cursor: auto;
 }
 
+.overlay-active {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  opacity: 1;
+}
+
 .menu-overlay {
   height: 100vh;
   width: 100vw;
   position: fixed;
   overflow-y: hidden !important;
+  display: none;
+  opacity: 0;
   right: 0;
   top: 0;
-  z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  z-index: 10;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -5849,6 +5855,40 @@ body {
   background: #000;
 }
 
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
 .top-line {
   z-index: 20;
   position: absolute;
@@ -5912,6 +5952,22 @@ body {
   background: #fff;
   width: 30px;
   margin: 5px 0;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.top-line .menu .button .burger .active {
+  background: #000 !important;
+}
+
+.top-line .menu .button .burger .active:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(1px, 2px);
+          transform: rotate(-45deg) translate(1px, 2px);
+}
+
+.top-line .menu .button .burger .active:nth-child(2) {
+  -webkit-transform: rotate(45deg) translate(-3px, -7px);
+          transform: rotate(45deg) translate(-3px, -7px);
 }
 
 .banner {
@@ -6161,12 +6217,35 @@ footer .contact .legal p {
   padding: 0 10px;
 }
 
+.menu-overlay .lay {
+  width: 0;
+}
+
+.menu-overlay nav {
+  width: 100vw;
+}
+
 @media (min-width: 576px) {
   .banner h1 {
     font-size: 100px;
   }
   .top-line {
     padding: 0 80px;
+  }
+  .menu-overlay .lay {
+    width: 0;
+  }
+  .menu-overlay nav {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-overlay .lay {
+    width: 55vw;
+  }
+  .menu-overlay nav {
+    width: 45vw;
   }
 }
 
