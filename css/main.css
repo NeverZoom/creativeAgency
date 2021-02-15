@@ -6183,15 +6183,15 @@ body {
 }
 
 .directions .photo {
-  background: url(/img/photo.jpg) center;
+  background: url(/creativeAgency/img/photo.jpg) center;
 }
 
 .directions .insta {
-  background: url(/img/insta.jpg) center;
+  background: url(/creativeAgency/img/insta.jpg) center;
 }
 
 .directions .develop {
-  background: url(/img/develop.jpg) center;
+  background: url(/creativeAgency/img/develop.jpg) center;
 }
 
 .directions-showed {
