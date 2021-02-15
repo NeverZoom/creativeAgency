@@ -104,6 +104,30 @@ function handleBubble(e) {
     bubble.classList.remove("bubble--big");
     document.body.style.cursor = "auto";
   }
+	
+	if (e.target.classList.contains("darker")) {
+    bubble.classList.add("click");
+    document.body.style.cursor = "pointer";
+  } else {
+    bubble.classList.remove("click");
+    // document.body.style.cursor = "auto";
+  }
+
+	if (e.target.classList.contains("next")) {
+    bubble.classList.add("cursor-next");
+    document.body.style.cursor = "pointer";
+  } else {
+    bubble.classList.remove("cursor-next");
+    // document.body.style.cursor = "auto";
+  }
+
+	if (e.target.classList.contains("prev")) {
+    bubble.classList.add("cursor-prev");
+    document.body.style.cursor = "pointer";
+  } else {
+    bubble.classList.remove("cursor-prev");
+    // document.body.style.cursor = "auto";
+  }
 }
 
 const buttons = document.querySelectorAll(".button");
@@ -163,3 +187,84 @@ const navSlide = () => {
 }
 
 navSlide();
+
+//slider
+const slider = () => {
+
+	const first = document.querySelector('.first-slide');
+	const second = document.querySelector('.second-slide');
+	const third = document.querySelector('.third-slide');
+	// const active = document.querySelector('.active');
+	const next = document.querySelector('.next');
+	const prev = document.querySelector('.prev');
+	const linkFirst = document.querySelector('.slide-link-first');
+	const linkSecond = document.querySelector('.slide-link-second');
+	const linkThird = document.querySelector('.slide-link-third');
+
+	
+
+	next.addEventListener('click', ()=> {
+
+		if (first.classList.contains("active")) {
+
+			first.classList.remove('active');
+			linkFirst.classList.remove('active');
+
+			second.classList.add('active');
+			linkSecond.classList.add('active');
+
+		} else if (second.classList.contains("active")) {
+
+			second.classList.remove('active');
+			linkSecond.classList.remove('active');
+
+			third.classList.add('active');
+			linkThird.classList.add('active');
+
+		} else {
+
+			third.classList.remove('active');
+			linkThird.classList.remove('active');
+
+			first.classList.add('active');
+			linkFirst.classList.add('active');
+
+		}
+
+	});
+
+	prev.addEventListener('click', ()=> {
+
+		if (third.classList.contains("active")) {
+
+			third.classList.remove('active');
+			linkThird.classList.remove('active');
+
+			second.classList.add('active');
+			linkSecond.classList.add('active');
+
+		} else if (second.classList.contains("active")) {
+
+			second.classList.remove('active');
+			linkSecond.classList.remove('active');
+
+
+			first.classList.add('active');
+			linkFirst.classList.add('active');
+
+		} else {
+
+			first.classList.remove('active');
+			linkFirst.classList.remove('active');
+
+			third.classList.add('active');
+			linkThird.classList.add('active');
+
+
+		}
+
+	});
+
+}
+
+slider();
