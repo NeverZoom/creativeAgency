@@ -6180,15 +6180,15 @@ body {
 }
 
 .case-slider .first-slide {
-  background: url(/img/slide-1.jpg) center;
+  background: url(/creativeAgency/img/slide-1.jpg) center;
 }
 
 .case-slider .second-slide {
-  background: url(/img/slide-2.jpg) center;
+  background: url(/creativeAgency/img/slide-2.jpg) center;
 }
 
 .case-slider .third-slide {
-  background: url(/img/slide-3.jpg) center;
+  background: url(/creativeAgency/img/slide-3.jpg) center;
 }
 
 .case-slider .first-slide, .case-slider .second-slide, .case-slider .third-slide {
