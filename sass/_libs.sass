@@ -33,6 +33,32 @@
 	// mix-blend-mode: exclusion
 	z-index: 9999
 
+.click
+	&::before
+		content: "Click" !important
+		display: block
+		position: absolute
+		left: -15px
+		top: -30px
+		color: #fff
+		cursor: pointer
+
+.cursor-next, .cursor-prev
+	&::before
+		display: block
+		position: absolute
+		font-size: 25px
+		left: -15px
+		top: -40px
+		color: #fff
+		cursor: pointer
+.cursor-next
+	&::before
+		content: "next" !important
+.cursor-prev
+	&::before
+		content: "prev" !important
+
 .mbm
 	mix-blend-mode: exclusion
 	transition: mix-blend-mode 0.8s ease
