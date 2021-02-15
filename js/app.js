@@ -268,3 +268,28 @@ const slider = () => {
 }
 
 slider();
+
+
+const weDoSlide = () => {
+
+	const overlay = document.querySelector('.darker');
+	const bg = document.querySelector('.services');
+	const directions = document.querySelector('.directions');
+
+	overlay.addEventListener('click', ()=> {
+	
+		bg.classList.add('services-out');
+		directions.classList.add('directions-showed');
+
+	});
+
+	directions.addEventListener('click', ()=> {
+	
+		bg.classList.remove('services-out');
+		directions.classList.remove('directions-showed');
+
+	});
+
+}
+
+weDoSlide();
