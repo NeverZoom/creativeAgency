@@ -275,6 +275,7 @@ const weDoSlide = () => {
 	const overlay = document.querySelector('.darker');
 	const bg = document.querySelector('.services');
 	const directions = document.querySelector('.directions');
+	const close = document.querySelector('.close');
 
 	overlay.addEventListener('click', ()=> {
 	
@@ -283,7 +284,7 @@ const weDoSlide = () => {
 
 	});
 
-	directions.addEventListener('click', ()=> {
+	close.addEventListener('click', ()=> {
 	
 		bg.classList.remove('services-out');
 		directions.classList.remove('directions-showed');
