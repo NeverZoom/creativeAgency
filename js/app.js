@@ -1,8 +1,38 @@
-// Preloader
+//Preloader
 $(window).on('load', function () {
+	$delay = 650,
+	$overflow = $('.ovf'),
 	$preloader = $('.wrapper'),
-	$preloader.delay(650).slideUp();
+	$preloader.delay($delay).slideUp();
+	$overflow.delay($delay).queue(function(){
+		$(this).removeClass('ovf');
+	});
 });
+
+
+// $(document).ready(function() {
+// 	$delay = 650,
+// 	$('body').delay($delay).queue(function(){
+// 		$(this).removeClass('page-is-changing');
+// 		$(this).removeClass('ovf');
+// 	});
+
+
+// $("a.transition").click(function(event){
+// 	event.preventDefault();
+// 	linkLocation = this.href;
+// 	$('body').addClass('page-is-changing');
+// 	$('body').addClass('ovf');
+
+// 	setTimeout(function (){redirectPage()}, $delay);
+
+// });
+
+// function redirectPage() {
+// 	window.location = linkLocation;
+// }
+// });
+
 
 class Button {
   constructor(node) {
@@ -294,3 +324,86 @@ const weDoSlide = () => {
 }
 
 weDoSlide();
+
+
+	$('.rotateInUp')
+			.waypoint( function(dir) {
+					if ( dir === 'down' )
+							$(this)
+							.removeClass('animate__fadeOut')
+							.addClass('animate__rotateInUpLeft');
+					else
+							$(this)
+							.removeClass('animate__rotateInUpLeft')
+							.addClass('animate__fadeOut');
+			}, {
+					offset: '80%'
+			})
+
+			.waypoint( function(dir) {
+					if ( dir === 'down' )
+							$(this)
+							.removeClass('animate__rotateInUpLeft')
+							.addClass('animate__fadeOut');
+					else
+							$(this)
+							.removeClass('animate__fadeOut')
+							.addClass('animate__rotateInUpLeft');
+			}, {
+					offset: -50
+			})
+
+			$('.fadeInUp')
+			.waypoint( function(dir) {
+					if ( dir === 'down' )
+							$(this)
+							.removeClass('animate__fadeOut')
+							.addClass('animate__fadeInUp');
+					else
+							$(this)
+							.removeClass('animate__fadeInUp')
+							.addClass('animate__fadeOut');
+			}, {
+					offset: '80%'
+			})
+
+			.waypoint( function(dir) {
+					if ( dir === 'down' )
+							$(this)
+							.removeClass('animate__fadeInUp')
+							.addClass('animate__fadeOut');
+					else
+							$(this)
+							.removeClass('animate__fadeOut')
+							.addClass('animate__fadeInUp');
+			}, {
+					offset: -10
+			})
+
+
+			$('.fadeIn')
+			.waypoint( function(dir) {
+					if ( dir === 'down' )
+							$(this)
+							.removeClass('animate__fadeOut')
+							.addClass('animate__fadeIn');
+					else
+							$(this)
+							.removeClass('animate__fadeIn')
+							.addClass('animate__fadeOut');
+			}, {
+					offset: '80%'
+			})
+
+			.waypoint( function(dir) {
+					if ( dir === 'down' )
+							$(this)
+							.removeClass('animate__fadeIn')
+							.addClass('animate__fadeOut');
+					else
+							$(this)
+							.removeClass('animate__fadeOut')
+							.addClass('animate__fadeIn');
+			}, {
+					offset: -500
+			})
